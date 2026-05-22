@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/*header {
+    background-color: #4CAF50;
+    padding: 1rem;
+}*/
+
+/* Navbar Styling */
+.navbar {
+    background: #393E46;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.navbar button:hover {
+    background-color: #604652;
+    transform: scale(1.05);
+}
+
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.result-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* Wraps on small screens */
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 5%;
+    height: calc(100vh - 80px);
+    /* Fills screen perfectly underneath the navbar */
+    gap: 40px;
+}
+
+.image-section {
+    margin-bottom: 0px;
+}
+
+.uploaded-img {
+    max-width: 450px;
+    max-height: 85vh;
+    /* Increased to match new card height */
+    width: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    background: #C4B5A2;
+    /* The exact beige color requested */
+    padding: 40px 30px;
+    /* Increased top & bottom space */
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 450px;
+    max-height: 85vh;
+    /* Increased height as requested */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    text-align: center;
+    box-sizing: border-box;
+    color: #43332D;
+    /* Slighly darker text for contrast on beige */
+}
+
+.info-section::-webkit-scrollbar {
+    display: none;
+}
+
+.info-section h1 {
+    margin-bottom: 15px;
+    color: #604652;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+audio {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.facts-section {
+    margin-top: 15px;
+}
+
+.facts-section h2 {
+    margin-bottom: 10px;
+    color: #604652;
+}
+
+#fact-display {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.bin-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 10px 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+.info-section button {
+    background-color: #604652;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+}
+
+.info-section button:hover {
+    background-color: #43332D;
+    transform: scale(1.05);
+}

@@ -1,0 +1,116 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-image: url("https://png.pngtree.com/background/20230703/original/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-picture-image_4128050.jpg");
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #393E46;
+  padding: 1rem 2rem;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.navbar button:hover {
+  background-color: #604652;
+  transform: scale(1.05);
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.upload-card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.upload-card h1 {
+  margin-bottom: 0.5rem;
+  color: #604652;
+}
+
+.upload-card p {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upload-form select,
+.upload-form input[type="file"] {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  padding: 1rem;
+  background-color: #393E46;
+  ;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #604652;
+}
+
+.result-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.result-card {
+  background: #97866A;
+  padding: 2rem 3rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.result-img {
+  margin-top: 1rem;
+  width: 300px;
+  border-radius: 10px;
+}

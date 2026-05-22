@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trashify - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+    
+</head>
+<body>
+   <header>
+  <nav class="navbar">
+          <div class="logo">Trashify</div>
+
+    
+    <div class="nav-links">
+     <button> <a href="{{ url_for('home') }}">Home</a></button>
+      <button><a href="{{ url_for('index') }}">Upload</a></button>
+    <button> <a href="{{ url_for('home') }}#contact">Contact</a></button>
+
+    </div>
+   
+  </nav>
+</header>
+
+    <main class="result-container">
+    <div class="image-section">
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Waste" class="uploaded-img">
+    </div>
+
+    <div class="info-section">
+        <h1>{{ classification_result }}</h1>
+        <p><strong>{{ category_heading }}:</strong> {{ category }}</p>
+        <p><strong>{{ recyclable_heading }}:</strong> {{ recyclable }}</p>
+        <p><strong>{{ recommended_bin_heading }}:</strong> {{ bin_type }}</p>
+        <img src="{{ url_for('static', filename='bins/' + bin_image) }}" alt="Bin Image" class="bin-img">
+
+        <audio controls>
+            <source src="{{ url_for('static', filename=audio) }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+       
+         <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+  <button id="find-bin-btn" data-category="{{ category }}">Find Bins Near Me</button>
+</div>
+
+        <a href="{{ url_for('suggestions_page', category=category) }}">
+  <button style="margin-top: 20px;">See Suggestions</button>
+</a>
+
+
+        <div class="facts-section">
+            <h2>{{ did_you_know_heading }}</h2>
+            <p id="fact-display"></p>
+        </div>
+    </div>
+</main>
+
+<script>
+    const facts = {{ facts | safe }};
+    let currentFact = 0;
+    const factDisplay = document.getElementById('fact-display');
+
+    function showNextFact() {
+        factDisplay.innerText = facts[currentFact];
+        currentFact = (currentFact + 1) % facts.length;
+    }
+
+    // First fact immediately
+    showNextFact();
+    // Change fact every 4 seconds
+    setInterval(showNextFact, 4000);
+</script>
+
+
+
+
+<script>
+    document.getElementById('find-bin-btn').addEventListener('click', function () {
+        const category = this.dataset.category.toLowerCase();
+        const lat = 17.7164;  // your college latitude
+        const lon = 83.1768;  // your college longitude
+
+        let query = '';
+
+                // Match query to category
+        if (category.includes('biological')) {
+            query = 'organic waste bin near me';
+        } else if (category.includes('plastic')) {
+            query = 'plastic recycling bin near me';
+        } else if (category.includes('glass')) {
+            query = 'glass recycling bin near me';
+        } else if (category.includes('battery')) {
+            query = 'e-waste collection center near me';
+        } else if (category.includes('paper')) {
+            query = 'paper recycling bin near me';
+        } else if (category.includes('shoes')) {
+            query = 'donation center near me';
+        } else if (category.includes('clothes')) {
+            query = 'Old clothes donation point near me';
+        } else {
+            query = 'waste disposal near me';
+        }
+        const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(query)}/@${lat},${lon},15z`;
+        window.open(mapsUrl, '_blank');
+    });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+                

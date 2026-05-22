@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Trashify</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" />
+  <style>
+    /* Custom Styles for List Headings and Content */
+    .features h3 {
+      text-align: center;
+      font-size: 1.5rem; /* Slightly smaller than the main heading */
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .features p {
+      text-align: center;
+      font-size: 1rem; /* Smaller font size for content */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-links">
+        <button><a href="{{ url_for('home') }}">Home</a></button>
+        <button><a href="{{ url_for('about') }}">About</a></button>
+        <button><a href="{{ url_for('home') }}#contact">Contact</a></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <div id="about" class="container">
+    <div class="card about-card">
+      <!-- Trashify Introduction -->
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Trashify Logo" class="icon" />
+      <p>Trashify is your smart AI companion for making waste disposal smarter, faster, and greener! 🌱♻️</p>
+
+      <!-- Spacer for clean separation -->
+      <div class="spacer"></div>
+
+      <!-- Features Section -->
+      <div class="features"><br><br>
+        <h2>✨ What Trashify Can Do:</h2>
+
+        <!-- Feature 1: Instant Image Recognition -->
+        <h4>📸 Instant Image Recognition</h3>
+        <p>Snap or upload a picture, and let Trashify identify the waste type!</p>
+
+        <!-- Feature 2: Recyclability Check -->
+        <h4>🗑️ Recyclability Check</h3>
+        <p>Know immediately if your item is recyclable or not.</p>
+
+        <!-- Feature 3: Smart Bin Guidance -->
+        <h4>🚮 Smart Bin Guidance</h3>
+        <p>Find out the right bin to dispose of your waste properly.</p>
+
+        <!-- Feature 4: Multi-Language Support -->
+        <h4>🌍 Multi-Language Support</h3>
+        <p>View all info in your preferred language effortlessly.</p>
+
+        <!-- Feature 5: Voice Narration -->
+        <h4>🔊 Voice Narration</h3>
+        <p>Listen to the waste category details in different languages!</p>
+
+        <!-- Feature 6: Fun Facts -->
+        <h4>💡 Fun Facts</h3>
+        <p>Discover interesting eco-facts with every classification!</p>
+      </div>
+
+      <!-- Spacer for clean separation -->
+      <div class="spacer"></div>
+
+      <!-- Tagline Section -->
+      <p class="tagline">Built with 💚 for a cleaner planet, Trashify makes sustainability easy, fun, and accessible to everyone!</p>
+      <p><em>Trashify — Where Smart Tech Meets Smart Choices. 🌎✨</em></p>
+
+      <!-- Spacer for clean separation -->
+      <div class="spacer"></div>
+
+      <!-- Image Gallery Section -->
+      <div class="image-gallery">
+        <img src="{{ url_for('static', filename='ai_waste_sorting.jpg') }}" alt="AI Waste Sorting System" />
+        <img src="{{ url_for('static', filename='smart_recycling.jpg') }}" alt="Smart Recycling Bin" />
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

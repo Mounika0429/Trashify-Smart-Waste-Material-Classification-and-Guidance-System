@@ -1,0 +1,166 @@
+  body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+   background-image: url("https://png.pngtree.com/background/20230703/original/pngtree-illustration-of-earth-preservation-3d-rendered-hand-holding-recycle-icon-picture-image_4128050.jpg");
+  color: #333;
+  padding-top: 100px; /* space for navbar */
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* to avoid any unwanted scroll */
+  background-size: contain;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:#393E46;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+.navbar button {
+    background: #393E46;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .navbar button:hover {
+    background-color:  #604652;
+    transform: scale(1.05);
+  }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+ font-size:18px
+  }
+
+  
+  /* Container & Card */
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    max-width: 600px;
+  }
+  
+  /* Icon */
+  .icon {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Button (Start) */
+  .btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #393E46;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 20px;
+  }
+
+  .about-img {
+    width: 500px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+  
+  
+    
+  .image-gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .btn:hover {
+    background-color: #604652;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+    
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+.about-card {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.features li strong {
+  color: #2e8b57; /* Slight green highlight */
+}
+
+.tagline {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color:  #604652;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 20px;
+}
+
+.image-gallery img {
+  width: 280px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
