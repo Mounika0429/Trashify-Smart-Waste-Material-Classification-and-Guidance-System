@@ -51,7 +51,7 @@ Trashify is an AI-powered Smart Waste Material Classification and Guidance Syste
 # 🗂️ Project Structure
 
 ```bash
-TRASHIFY123/
+TRASHIFY_PROJECT/
 │
 ├── trashify/
 │   ├── dataset/
