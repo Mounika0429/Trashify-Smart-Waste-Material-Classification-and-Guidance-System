@@ -1,0 +1,2 @@
+# Trashify-Smart-Waste-Material-Classification-and-Guidance-System
+Trashify is an AI-powered waste classification system built with Flask and TensorFlow that detects waste from uploaded images and provides recycling guidance, disposal methods, bin suggestions, multilingual voice support, nearby recycling and dumpyard locations, and YouTube videos to encourage daily ecofriendly waste management practices.
