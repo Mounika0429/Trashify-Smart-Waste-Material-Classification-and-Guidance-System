@@ -4,6 +4,7 @@ import numpy as np
 from werkzeug.utils import secure_filename
 import tensorflow as tf
 
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 tf.config.threading.set_inter_op_parallelism_threads(1)
 tf.config.threading.set_intra_op_parallelism_threads(1)
 
@@ -73,7 +74,7 @@ def classify_image(img_path):
             img_array = np.expand_dims(img_array, axis=0)
 
             print("Starting prediction...")
-            prediction = model.predict(img_array)
+            prediction = model.predict(img_array, verbose=0)    
             print("Prediction completed")
             print(prediction)
             predicted_class = np.argmax(prediction[0])
