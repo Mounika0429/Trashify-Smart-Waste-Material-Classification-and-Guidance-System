@@ -12,7 +12,10 @@ try:
     from tensorflow.keras.models import load_model
     from tensorflow.keras.preprocessing import image
 
-    model = load_model('models/updated_wastemodel.keras')
+    model = load_model(
+    'models/updated_wastemodel.keras',
+    compile=False
+      )
     HAS_MODEL = True
     print("Model loaded successfully.")
 except Exception as e:
