@@ -73,7 +73,9 @@ def classify_image(img_path):
 
             return class_names[predicted_class]
         except Exception as e:
-            print("Classification error:", e)
+            import traceback
+            print("FULL CLASSIFICATION ERROR:")
+            traceback.print_exc()
             return "Unknown"
     return "Unknown"
 
