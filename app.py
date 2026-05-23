@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 import os
 import numpy as np
 from werkzeug.utils import secure_filename
+import tensorflow as tf
+
+tf.config.threading.set_inter_op_parallelism_threads(1)
+tf.config.threading.set_intra_op_parallelism_threads(1)
 
 print("Starting Trashify application...")
 
@@ -68,7 +72,10 @@ def classify_image(img_path):
             img_array = img_array.astype("float32") / 255.0
             img_array = np.expand_dims(img_array, axis=0)
 
+            print("Starting prediction...")
             prediction = model.predict(img_array)
+            print("Prediction completed")
+            print(prediction)
             predicted_class = np.argmax(prediction[0])
 
             return class_names[predicted_class]
